@@ -32,6 +32,7 @@ valid = sorted(list(set(filter(validate, map(lambda x : "".join(x), perms)))), k
 
 print(len(valid))
 print(valid)
+input()
 
 # LETTERS = "grievpeil"
 # REQUIRED = 'l'
