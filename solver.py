@@ -4,7 +4,7 @@ import json
 DICT1 = "dictionary1.json" # Bigger
 DICT2 = "dictionary2.json" # Smaller
 
-DICTIONARY = DICT2
+DICTIONARY = DICT1
 
 LETTERS = input("All Letters: ")
 REQUIRED = input("Required Letter: ")
