@@ -61,10 +61,16 @@ def main():
     valid = []
     for i in range(min_size, max_size+1):
         i_perms = list(itertools.permutations(available_letters, i))
-        i_perms = list(set(map(lambda x : x.lower(), list(filter(validate, map(lambda x : "".join(x), i_perms))))))
+        i_perms = sorted(list(set(map(lambda x : x.lower(), list(filter(validate, map(lambda x : "".join(x), i_perms)))))))
         valid.extend(i_perms)
 
-        print(i,":",i_perms)
+        if len(i_perms) > 0:
+            print(i,":",end=" ")
+            for perm in i_perms:
+                print(perm.capitalize(), end=", ")
+            print()
+        else:
+            print(i,":","NONE FOUND")
 
     # valid = sorted(list(set(filter(validate, map(lambda x : "".join(x), perms)))), key=len)
 
